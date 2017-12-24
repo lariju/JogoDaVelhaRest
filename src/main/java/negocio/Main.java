@@ -49,9 +49,11 @@ public class Main {
                 + "<h2><center><br>Ninguem ganhou! Continue jogando:</h2></center>"
                 + "<h1><center>" + tabuleiro.mostrarPosicoes()+ "</center></h1>";
         }if(jogo.ganhar(jogadas, tabuleiro).equals("X")){
-            return "Jogador X VENCEU!"+ "<h1><center>"+tabuleiro.mostrarPosicoes()+"</center></h1>";
+           return "Jogador X VENCEU!"+ "<h1><center>"+tabuleiro.mostrarPosicoes()+"</center></h1>";
+            
         }if(jogo.ganhar(jogadas, tabuleiro).equals("O")){
              return "Jogador O VENCEU! "+ "<h1><center>"+tabuleiro.mostrarPosicoes()+"</center></h1>";
+           
         }
         return "";
     }

@@ -54,7 +54,7 @@ public class Tabuleiro {
         String imprimirTabuleiro = "";
         for (int i = 0; i < tab.length; i++) {
             for (int j = 0; j < tab.length; j++) {
-                imprimirTabuleiro += tab[i][j] + " | ";
+               imprimirTabuleiro += tab[i][j] + " | ";
             }
             imprimirTabuleiro = imprimirTabuleiro + "<br>";
 
