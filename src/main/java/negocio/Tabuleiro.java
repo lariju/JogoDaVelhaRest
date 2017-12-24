@@ -5,8 +5,6 @@
  */
 package negocio;
 
-
-
 /**
  *
  * @author 20141D12GR0149
@@ -16,7 +14,6 @@ public class Tabuleiro {
     static String tab[][] = new String[3][3];
     static String[][] tabuleiroC = {{"1", "2", "3"}, {"4", "5", "6"}, {"7", "8", "9"}};
 
- 
     public Tabuleiro() {
         tab[0][0] = "1";
         tab[0][1] = "2";
@@ -30,9 +27,8 @@ public class Tabuleiro {
         tab[2][1] = "8";
         tab[2][2] = "9";
     }
-    
-    
-    public String resetarTabuleiro(){
+
+    public String resetarTabuleiro() {
         String tabuleiroResetado = "";
         tab[0][0] = "1";
         tab[0][1] = "2";
@@ -45,20 +41,23 @@ public class Tabuleiro {
         tab[2][0] = "7";
         tab[2][1] = "8";
         tab[2][2] = "9";
-        
-        tabuleiroResetado+=tabuleiroC;
+
+        tabuleiroResetado += tabuleiroC;
         return tabuleiroResetado;
     }
-    public String mostrarPosicoes() {
 
-        String imprimirTabuleiro = "";
+    public String mostrarPosicoes() {
+        String mostrar = "";
+        mostrar += "<table align=\"center\" border=\"6\" style=\"width:400px\">";
         for (int i = 0; i < tab.length; i++) {
+            mostrar += "<tr>";
             for (int j = 0; j < tab.length; j++) {
-               imprimirTabuleiro += tab[i][j] + " | ";
+                mostrar += "<td style=\"width: 93px\"> <h1 align=\"center\"><a href=\"http://localhost8089/JogoDaVelhaWeb/rest/joguinho/jogar?jog="
+                        + tab[i][j] + "\">" + tab[i][j] + "</a></h1></td>";
             }
-            imprimirTabuleiro = imprimirTabuleiro + "<br>";
+            mostrar = mostrar + "</tr>";
 
         }
-        return imprimirTabuleiro;
+        return mostrar;
     }
 }
